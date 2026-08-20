@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.FaceLivenessAndroidSDK" parent="Theme.MaterialComponents.Light.NoActionBar"></style>
+</resources>

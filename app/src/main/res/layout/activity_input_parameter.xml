@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:title="Input Parameters"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:titleTextColor="@color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Token"
+                android:maxLines="5"
+                android:minLines="2" />
+
+            <EditText
+                android:id="@+id/etBackendUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Backend Url" />
+
+            <EditText
+                android:id="@+id/etTenant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tenant" />
+
+            <EditText
+                android:id="@+id/etOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Origin" />
+
+            <EditText
+                android:id="@+id/etLocalization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Localization JSON"
+                android:minLines="3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Captrye Text" />
+
+            <EditText
+                android:id="@+id/etCaptureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Capture Text JSON"
+                android:minLines="3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brand" />
+
+            <EditText
+                android:id="@+id/etBrandName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logo Url" />
+
+            <EditText
+                android:id="@+id/etBrandLogoUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Logo Url" />
+
+            <EditText
+                android:id="@+id/etBrandSecureLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Secure Label" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swSkipIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skip Intro" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swSkipPrepare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skip Prepare" />
+
+            <!-- Theme 标题 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Theme"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Primary Color Picker Item -->
+            <LinearLayout
+                android:id="@+id/btnPickPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Primary"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/viewPrimaryColor"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="#1D4ED8" />
+            </LinearLayout>
+
+            <!-- Secondary Color Picker Item -->
+            <LinearLayout
+                android:id="@+id/btnPickSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Secondary Color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/viewSecondaryColor"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="#64748B" />
+            </LinearLayout>
+
+            <!-- Heading Color Picker Item -->
+            <LinearLayout
+                android:id="@+id/btnPickHeading"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Heading Color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/viewHeadingColor"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="#0F172A" />
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvErrorLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:textColor="#D32F2F"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Continue" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
