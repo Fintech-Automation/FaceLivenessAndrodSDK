@@ -1,6 +1,6 @@
-# FTA Face Liveness Android SDK
+# FTA Identity Verification Android SDK
 
-The FTA Face Liveness Android SDK provides face liveness verification for Android applications through an idiomatic Kotlin API. It includes the liveness UI, configuration models, JavaScript bridge, callbacks, session handling, and result/error models required to integrate face liveness into an Android application.
+The FTA Identity Verification Android SDK provides identity verification verification for Android applications through an idiomatic Kotlin API. It includes the liveness UI, configuration models, JavaScript bridge, callbacks, session handling, and result/error models required to integrate identity verification into an Android application.
 
 ## Flow
 
@@ -20,7 +20,7 @@ For a local module:
 
 ```kotlin
 dependencies {
-    implementation(project(":fta-face-liveness-android-sdk"))
+    implementation(project(":fta-identity-verification-android-sdk"))
 }
 ```
 
@@ -34,10 +34,10 @@ The SDK requires:
 
 ## Usage
 
-Create a `FaceLivenessView` in your Activity or Fragment and configure the required SDK parameters.
+Create a `IdentityVerificationView` in your Activity or Fragment and configure the required SDK parameters.
 
 ```kotlin
-val view = findViewById<FaceLivenessView>(R.id.faceLivenessView)
+val view = findViewById<IdentityVerificationView>(R.id.identityVerificationView)
 
 view.verificationToken = "YOUR_TOKEN"
 
@@ -64,37 +64,37 @@ view.theme = LivenessTheme(
     )
 )
 
-view.listener = object : FaceLivenessListener {
+view.listener = object : IdentityVerificationListener {
     override fun onSuccess(result: LivenessResultModel?) {
-        println("Liveness succeeded: ${result?.toJson()}")
+        println("Identity Verification succeeded: ${result?.toJson()}")
     }
 
     override fun onFail(result: LivenessResultModel?) {
-        println("Liveness failed: ${result?.toJson()}")
+        println("Identity Verification failed: ${result?.toJson()}")
     }
 
     override fun onError(error: LivenessErrorModel?) {
-        println("Liveness error: ${error?.toJson()}")
+        println("Identity Verification error: ${error?.toJson()}")
     }
 
     override fun onCancel() {
-        println("Liveness canceled")
+        println("Identity Verification canceled")
     }
 
     override fun onContinue() {
-        println("Liveness continue")
+        println("Identity Verification continue")
     }
 
     override fun onAnalysisComplete() {
-        println("Liveness analysis complete")
+        println("Identity Verification analysis complete")
     }
 
     override fun onScreenChange(screenType: LivenessScreenType?) {
-        println("Liveness screen: $screenType")
+        println("Identity Verification screen: $screenType")
     }
 
     override fun onSessionStatusChange(status: LivenessSessionStatus?) {
-        println("Session status: ${status?.status}")
+        println("Identity Verification session status: ${status?.status}")
     }
 }
 
@@ -105,7 +105,7 @@ view.load()
 
 Obtain a `verificationToken` from your backend before starting the liveness flow.
 
-Pass the complete token to `FaceLivenessView.verificationToken` without decoding, prefixing, or modifying it.
+Pass the complete token to `IdentityVerificationView.verificationToken` without decoding, prefixing, or modifying it.
 
 The SDK handles token decoding, session validation, session creation, capture, result lookup, and session-status handling internally. Applications only need to provide the complete verification token.
 
@@ -244,7 +244,7 @@ Keys are passed through unchanged to the shared HTML runtime.
 
 ## Callbacks
 
-Implement `FaceLivenessListener` to receive liveness lifecycle events:
+Implement `IdentityVerificationListener` to receive liveness lifecycle events:
 
 | Callback | Description |
 | --- | --- |
@@ -355,14 +355,14 @@ Backend URL and Tenant are included in the sample UI for configuration and testi
 
 | Component | Purpose |
 | --- | --- |
-| `FaceLivenessView` | Main Android liveness view. |
+| `IdentityVerificationView` | Main Android liveness view. |
 | `verificationToken` | Authentication and verification token. |
 | `brand` | Brand and trust presentation. |
 | `flow` | Intro and preparation flow configuration. |
 | `theme` | Colors, shape, and typography configuration. |
 | `localization` | Screen and action text configuration. |
 | `captureText` | Capture guidance text configuration. |
-| `FaceLivenessListener` | Liveness lifecycle callbacks. |
+| `IdentityVerificationListener` | Liveness lifecycle callbacks. |
 
 ## Notes
 
@@ -373,6 +373,6 @@ Backend URL and Tenant are included in the sample UI for configuration and testi
 
 ## License
 
-This repository includes the FinTech Face Liveness SDK, which is licensed under a Commercial License Agreement. See the repository license files for the applicable terms.
+This repository includes the FinTech Identity Verification SDK, which is licensed under a Commercial License Agreement. See the repository license files for the applicable terms.
 
 Use of this SDK requires explicit permission from FinTech Automation.

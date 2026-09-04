@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.fta.sdk.face.liveness.sample"
+    namespace = "com.fta.sdk.identity.verification.sample"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.fta.sdk.face.liveness.sample"
+        applicationId = "com.fta.sdk.identity.verification.sample"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -58,7 +58,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation("com.google.android.material:material:1.11.0")
-    implementation(project(":fta-face-liveness-android-sdk"))
+//    implementation("com.github.Fintech-Automation:FaceLivenessAndrodSDK:v1.0.0")
+    implementation(project(":fta-identity-verification-android-sdk"))
 }
 
 configurations.all {

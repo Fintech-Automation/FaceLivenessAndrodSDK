@@ -1,6 +1,6 @@
 # Android Example
 
-The Android example application demonstrates how to integrate and configure the FTA Face Liveness Android SDK.
+The Android example application demonstrates how to integrate and configure the FTA Identity Verification Android SDK.
 
 The sample configuration is organized into the following sections:
 
@@ -13,6 +13,6 @@ The sample configuration is organized into the following sections:
 7. Continue
 8. Face Liveness
 
-The sample is intended for SDK integration testing and development. Production applications should obtain the `verificationToken` from their own backend and pass the complete token to `FaceLivenessView`.
+The sample is intended for SDK integration testing and development. Production applications should obtain the `verificationToken` from their own backend and pass the complete token to `IdentityVerificationView`.
 
 See the repository root `README.md` for the complete Android API and configuration details.

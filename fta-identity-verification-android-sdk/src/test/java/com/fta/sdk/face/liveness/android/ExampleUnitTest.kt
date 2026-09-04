@@ -1,4 +1,4 @@
-package com.fta.sdk.identity.verification.sample
+package com.fta.sdk.identity.verification.android
 
 import org.junit.Test
 

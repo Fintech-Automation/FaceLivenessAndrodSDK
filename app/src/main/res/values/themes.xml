@@ -1,4 +1,4 @@
 <resources>
 
-    <style name="Theme.FaceLivenessAndroidSDK" parent="Theme.MaterialComponents.Light.NoActionBar"></style>
+    <style name="Theme.IdentityVerificationAndroidSDK" parent="Theme.MaterialComponents.Light.NoActionBar"></style>
 </resources>

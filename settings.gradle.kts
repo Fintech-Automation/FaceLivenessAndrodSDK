@@ -16,9 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
-rootProject.name = "Face Liveness Androd SDK"
+rootProject.name = "Identity Verification Androd SDK"
 include(":app")
-include(":fta-face-liveness-android-sdk")
+include(":fta-identity-verification-android-sdk")
